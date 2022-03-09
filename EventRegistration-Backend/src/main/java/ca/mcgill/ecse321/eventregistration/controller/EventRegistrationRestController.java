@@ -83,7 +83,7 @@ public class EventRegistrationRestController {
 	
 	@GetMapping(value = { "/registrations/person/{name}", "/registrations/person/{name}/" })
 	public List<EventDto> getEventsOfPerson(@PathVariable("name") PersonDto pDto) {
-		//pDto is extracted from the url (everything incoming with a request to the backend are DTOs)
+		//pDto is extracted from the url (everything incoming with a request to the backend are DTOs) 	
 		Person p = convertToDomainObject(pDto);
 		return createEventDtosForPerson(p);
 	}
